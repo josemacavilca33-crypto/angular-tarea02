@@ -1,0 +1,58 @@
+<div class="mx-2 my-3 cl-md-1">
+   <button type="button" class="btn btn-outline-primary" (click)="onGoBack()">Regresar</button>
+</div>
+<div>
+
+    <form #doctorForm="ngForm" (ngSubmit)="onSave(doctorForm.value)">
+    <div class="col-md-2 py-2">
+        <label form="doctorNombre">NOMBRES</label>
+        <input id="doctorNombre" type="text" name="nombre" class="form-control shadow-none" #nombre="ngModel"
+            [(ngModel)]="doctor.nombre" [ngClass]="{'is-valid': !nombre.invalid, 'is-invalid': nombre.invalid}"
+            maxlength="400" required="" />
+        <div class="invalid-feedback">
+            <div *ngIf="'name.errors.length'">
+                Solo se pueden introducir un maximo de 400 caracteres
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-2 py-2">
+        <label form="doctorEspecialidad">ESPECIALIDAD</label>
+        <input id="doctorEspecialidad" type="text" name="especialidad" class="form-control shadow-none" #especialidad="ngModel"
+            [(ngModel)]="doctor.especialidad" [ngClass]="{'is-valid': !especialidad.invalid, 'is-invalid': especialidad.invalid}"
+            maxlength="100" required />
+
+    </div>
+    <div class="col-md-2 py-2">
+        <label form="doctorTelefono">TELEFONO</label>
+        <input id="doctorTelefono" type="text" name="telefono" class="form-control shadow-none" #telefono="ngModel"
+            [(ngModel)]="doctor.telefono"   [ngClass]="{'is-valid': !telefono.invalid, 'is-invalid': telefono.invalid}"
+      maxlength="9" required/>
+      <div class="invalid-feedback">
+            <div *ngIf="'name.errors.length'">
+                Ingrese solo 9 caracteres como numero de telefono
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-2 py-2">
+        <label for="doctorEmail">EMAIL</label>
+        <input id="doctorEmail" type="email" name="email" class="form-control shadow-none" #email="ngModel"
+            [(ngModel)]="doctor.email" [ngClass]="{'is-valid': !email.invalid, 'is-invalid': email.invalid}"
+            required />
+    </div>
+    <div class="col-md-2 py-2">
+        <label for="doctorEstado">ESTADO</label>
+        <input id="doctorEstado" type="text" name="estado" class="form-control shadow-none" #estado="ngModel"
+            [(ngModel)]="doctor.estado" [ngClass]="{'is-valid': !estado.invalid, 'is-invalid': estado.invalid}"
+            required />
+    </div>
+    <div class="col-md-2 py-2">
+        <button type="submit" class="btn btn-primary" [disabled]="doctorForm.invalid">
+            Enviar
+        </button>
+    </div>
+</form>
+</div>
+{{doctorForm.value | json}}
+

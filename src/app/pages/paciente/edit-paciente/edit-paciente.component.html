@@ -1,0 +1,116 @@
+<div class="mx-2 my-3 cl-md-1">
+    <button type="button" class="btn btn-outline-primary" (click)="onGoBack()">Regresar</button>
+</div>
+<div>
+
+    <form #afiliadoForm="ngForm" (ngSubmit)="onSave(afiliadoForm.value)">
+        <div class="col-md-2 py-2">
+            <label form="afiliacionCodigoAfiliado">CODIGO DE AFILIACION</label>
+            <input id="afiliacionCodigoAfiliado" type="text" name="codigoAfiliado" class="form-control shadow-none" #codigoAfiliado="ngModel"
+                [(ngModel)]="afiliado.codigoAfiliado" [ngClass]="{'is-valid': !codigoAfiliado.invalid, 'is-invalid': codigoAfiliado.invalid}"
+                maxlength="7" required="" />
+            <div class="invalid-feedback">
+                <div *ngIf="'name.errors.length'">
+                    Solo se pueden introducir un maximo de 07 caracteres
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-2 py-2">
+            <label form="afiliadoNombre">NOMBRES</label>
+            <input id="afiliadoNombre" type="text" name="nombre" class="form-control shadow-none" #nombre="ngModel"
+                [(ngModel)]="afiliado.nombre" [ngClass]="{'is-valid': !nombre.invalid, 'is-invalid': nombre.invalid}"
+                maxlength="400" required="" />
+            <div class="invalid-feedback">
+                <div *ngIf="'name.errors.length'">
+                    Solo se pueden introducir un maximo de 400 caracteres
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-2 py-2">
+            <label form="afiliadoDni">DNI</label>
+            <input id="afiliadoDni" type="text" name="dni" class="form-control shadow-none" #dni="ngModel"
+                [(ngModel)]="afiliado.dni" [ngClass]="{'is-valid': !dni.invalid, 'is-invalid': dni.invalid}"
+                maxlength="10" required />
+
+        </div>
+        <div class="col-md-2 py-2">
+            <label form="afiliadoEdad">EDAD</label>
+            <input id="afiliadoEdad" type="text" name="edad" class="form-control shadow-none" #edad="ngModel"
+                [(ngModel)]="afiliado.edad" [ngClass]="{'is-valid': !edad.invalid, 'is-invalid': edad.invalid}"
+                maxlength="3" required />
+            <div class="invalid-feedback">
+                <div *ngIf="'name.errors.length'">
+                    Ingrese solo 3 caracteres para indicar la edad del afiliado
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-2 py-2">
+            <label form="afiliadoTelefono">TELEFONO</label>
+            <input id="afiliadoTelefono" type="text" name="telefono" class="form-control shadow-none"
+                #telefono="ngModel" [(ngModel)]="afiliado.telefono"
+                [ngClass]="{'is-valid': !telefono.invalid, 'is-invalid': telefono.invalid}" maxlength="9" required />
+            <div class="invalid-feedback">
+                <div *ngIf="'name.errors.length'">
+                    Ingrese solo 9 caracteres como numero de telefono
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-2 py-2">
+            <label for="afiliadoEmail">EMAIL</label>
+            <input id="afiliadoEmail" type="email" name="email" class="form-control shadow-none" #email="ngModel"
+                [(ngModel)]="afiliado.email" [ngClass]="{'is-valid': !email.invalid, 'is-invalid': email.invalid}"
+                required />
+        </div>
+        <div class="col-md-2 py-2">
+            <label for="afiliadoDireccion">DIRECCION</label>
+            <input id="afiliadoDireccion" type="text" name="direccion" class="form-control shadow-none"
+                #direccion="ngModel" [(ngModel)]="afiliado.direccion"
+                [ngClass]="{'is-valid': !direccion.invalid, 'is-invalid': direccion.invalid}" required />
+        </div>
+        <div class="col-md-2 py-2">
+            <label for="afiliadoTipoSangre">TIPO DE SANGRE</label>
+            <input id="afiliadoTipoSangre" type="text" name="tipoSangre" class="form-control shadow-none"
+                #tipoSangre="ngModel" [(ngModel)]="afiliado.tipoSangre"
+                [ngClass]="{'is-valid': !tipoSangre.invalid, 'is-invalid': tipoSangre.invalid}" required />
+        </div>
+        <div class="col-md-2 py-2">
+            <label for="afiliadoEnfermedad">ENFERMEDAD</label>
+            <input id="afiliadoEnfermedad" type="text" name="enfermedad" class="form-control shadow-none"
+                #enfermedad="ngModel" [(ngModel)]="afiliado.enfermedad"
+                [ngClass]="{'is-valid': !enfermedad.invalid, 'is-invalid': enfermedad.invalid}" required />
+        </div>
+
+        <div class="col-md-2 py-2">
+            <label for="afiliacionDonador">DONADOR</label>
+
+            <select id="afiliacionDonador" name="donador" class="form-control shadow-none" #donador="ngModel"
+                [(ngModel)]="afiliado.donador" [ngClass]="{'is-valid': !donador.invalid, 'is-invalid': donador.invalid}"
+                required>
+
+                <option value="" disabled>Seleccione...</option>
+                <option [ngValue]="true">Sí</option>
+                <option [ngValue]="false">No</option>
+            </select>
+        </div>
+
+
+
+        <div class="col-md-2 py-2">
+            <label for="afiliacionFecVenci">VENCIMIENTO DE AFILIACION</label>
+            <input id="afiliacionFecVenci" type="text" name="fecVenci" class="form-control shadow-none"
+                #fecVenci="ngModel" [(ngModel)]="afiliado.fecVenci"
+                [ngClass]="{'is-valid': !fecVenci.invalid, 'is-invalid': fecVenci.invalid}" required />
+        </div>
+
+        <div class="col-md-2 py-2">
+            <button type="submit" class="btn btn-primary" [disabled]="afiliadoForm.invalid">
+                Enviar
+            </button>
+        </div>
+    </form>
+</div>
+{{afiliadoForm.value | json}}

@@ -1,0 +1,32 @@
+<div class="mx-2 my-3 cl-md-1">
+    <button type="button" class="btn btn-outline-primary" (click)="onGoBack()">Regresar</button>
+</div>
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <h4>Informacion del afiliado {{afiliado.nombre}}</h4>
+        </div>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">
+                Codigo de Afiliado: <h2>{{afiliado.codigoAfiliado}}</h2>
+            </li>
+            <li class="list-group-item">
+                Dni: <h2>{{afiliado.dni}}</h2>
+            </li>
+            <li class="list-group-item">
+                Tipo de Sangre: <h2>{{afiliado.tipoSangre}}</h2>
+            </li>
+            <li class="list-group-item">
+                Enfermedad: <h2>{{afiliado.enfermedad}}</h2>
+            </li>
+            <li class="list-group-item">
+                Donador: <h2>{{afiliado.donador}}</h2>
+            </li>
+            <li class="list-group-item">
+                Vencimiento de Afiliacion: <h2>{{afiliado.fecVenci}}</h2>
+            </li>
+        </ul>
+    </div>
+</div>

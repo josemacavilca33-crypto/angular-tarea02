@@ -1,0 +1,23 @@
+<div class="mx-2 my-3 cl-md-1">
+    <button type="button" class="btn btn-outline-primary" (click)="onGoBack()">Regresar</button>
+</div>
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <h4>Informacion de {{doctor.nombre}}</h4>
+        </div>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">
+                Email: <h2>{{doctor.email}}</h2>
+            </li>
+            <li class="list-group-item">
+                Telefono: <h2>{{doctor.telefono}}</h2>
+            </li>
+            <li class="list-group-item">
+                Especialidad: <h2>{{doctor.especialidad}}</h2>
+            </li>
+        </ul>
+    </div>
+</div>
