@@ -1,15 +1,15 @@
 {
   "doctores": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Dr. Juan Pérez",
-      "especialidad": "Cardiología",
-      "telefono": "987654321",
+      "especialidad": "Pediatría",
+      "telefono": 987654321,
       "email": "juan.perez@hospital.com",
       "estado": "Activo"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Dra. María López",
       "especialidad": "Pediatría",
       "telefono": "945321678",
@@ -17,7 +17,7 @@
       "estado": "Activo"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Dr. Pedro Castillo",
       "especialidad": "Traumatología",
       "telefono": "924567890",
@@ -25,7 +25,7 @@
       "estado": "Inactivo"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Dra. Ana Torres",
       "especialidad": "Dermatología",
       "telefono": "987120345",
@@ -33,7 +33,7 @@
       "estado": "Activo"
     },
     {
-      "id": 5,
+      "id": "5",
       "nombre": "Dr. Luis García",
       "especialidad": "Oftalmología",
       "telefono": "956478120",
@@ -41,16 +41,33 @@
       "estado": "Inactivo"
     },
     {
+      "id": "6",
       "nombre": "Dr. Lizardo Montero",
-      "especialidad": "Cardiología",
-      "telefono": "920834923",
+      "especialidad": "Pediatría",
+      "telefono": 920834923,
       "email": "lizardoOP@gmail.com",
-      "id": 6
+      "estado": "Inactivo"
+    },
+    {
+      "id": "a7a0",
+      "nombre": "Luis Guiseppe Escobar Quintana",
+      "especialidad": "Neurología",
+      "telefono": 910357595,
+      "email": "elchancateclas@gmail.com",
+      "estado": "Activo"
+    },
+    {
+      "id": "0586",
+      "nombre": "Julio",
+      "especialidad": "Traumatología",
+      "telefono": 985875421,
+      "email": "julio@demo.com",
+      "estado": "Activo"
     }
   ],
   "afiliados": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Carlos Ramos",
       "dni": "74589632",
       "edad": 32,
@@ -64,7 +81,7 @@
       "fecVenci": "2026-03-15"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "María Torres",
       "dni": "70895412",
       "edad": 28,
@@ -78,7 +95,7 @@
       "fecVenci": "2025-12-31"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Eugenio Manzilla",
       "dni": "78392018",
       "edad": 22,
@@ -92,7 +109,7 @@
       "fecVenci": "2026-12-31"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Jesus Adrianzen",
       "dni": "73821930",
       "edad": 30,
@@ -106,7 +123,7 @@
       "fecVenci": "2026-10-31"
     },
     {
-      "id": 5,
+      "id": "5",
       "codigoAfiliado": "AF-07",
       "nombre": "CRISTINA AMELIA PANDURO ESPINO",
       "dni": "78392018",
@@ -122,7 +139,7 @@
   ],
   "citasMedicas": [
     {
-      "id": 1,
+      "id": "1",
       "fecha": "2025-01-15",
       "hora": "10:30",
       "motivo": "Control general",
@@ -131,7 +148,7 @@
       "estado": "Programada"
     },
     {
-      "id": 2,
+      "id": "2",
       "fecha": "2025-02-05",
       "hora": "08:00",
       "motivo": "Dolor de cabeza persistente",

@@ -7,47 +7,49 @@ import { NewPacienteComponent } from './pages/paciente/new-paciente/new-paciente
 import { ListPacienteComponent } from './pages/paciente/list-paciente/list-paciente.component';
 import { EditPacienteComponent } from './pages/paciente/edit-paciente/edit-paciente.component';
 import { DetailPacienteComponent } from './pages/paciente/detail-paciente/detail-paciente.component';
+import { DoctorAmComponent } from './pages/doctor-am/doctor-am.component';
 
 export const routes: Routes = [
 
-{
- path: 'new',
- component: NewComponent   
-},
-{
-    path: 'list',
-    component: ListComponent
-},
-{
-    path: 'edit/:id',
-    component: EditComponent
-},
-{
-    path: 'detail/:id',
-    component: DetailComponent
-},
-{
- path: 'newAfiliado',
- component: NewPacienteComponent   
-},
-{
-    path: 'listAfiliado',
-    component: ListPacienteComponent
-},
-{
-    path: 'editAfiliado/:id',
-    component: EditPacienteComponent
-},
-{
-    path: 'detailAfiliado/:id',
-    component: DetailPacienteComponent
-},
+    {
+        path: 'new',
+        component: NewComponent
+    },
+    {
+        path: 'list',
+        component: ListComponent
+    },
+    {
+        path: 'edit/:id',
+        component: EditComponent
+    },
+    {
+        path: 'detail/:id',
+        component: DetailComponent
+    },
+    {
+        path: 'newAfiliado',
+        component: NewPacienteComponent
+    },
+    {
+        path: 'listAfiliado',
+        component: ListPacienteComponent
+    },
+    {
+        path: 'editAfiliado/:id',
+        component: EditPacienteComponent
+    },
+    {
+        path: 'detailAfiliado/:id',
+        component: DetailPacienteComponent
+    },
+    {
+        path: 'doctorAM',
+        component: DoctorAmComponent
+    },
 
-
-
-
-{
-    path: '**', redirectTo:'list'
-}
+    {
+        path: '**', redirectTo: 'list'
+    }
 
 ];

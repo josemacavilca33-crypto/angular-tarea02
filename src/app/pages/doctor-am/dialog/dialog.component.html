@@ -1,0 +1,86 @@
+<h2 mat-dialog-title class="dialog-title">{{ titulo }}</h2>
+
+<mat-dialog-content class="dialog-content">
+  <form [formGroup]="formulario" class="doctor-form">
+    <!-- Nombre -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nombre Completo</mat-label>
+      <input matInput formControlName="nombre" placeholder="Dr. Juan Pérez">
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-error *ngIf="nombre?.hasError('required')">
+        El nombre es requerido
+      </mat-error>
+      <mat-error *ngIf="nombre?.hasError('minlength')">
+        El nombre debe tener al menos 3 caracteres
+      </mat-error>
+      <mat-error *ngIf="nombre?.hasError('maxlength')">
+        El nombre no puede exceder 100 caracteres
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Especialidad -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Especialidad</mat-label>
+      <mat-select formControlName="especialidad">
+        <mat-option value="">Seleccione una especialidad</mat-option>
+        <mat-option *ngFor="let esp of especialidades" [value]="esp">
+          {{ esp }}
+        </mat-option>
+      </mat-select>
+      <mat-icon matPrefix>local_hospital</mat-icon>
+      <mat-error *ngIf="especialidad?.hasError('required')">
+        La especialidad es requerida
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Teléfono -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Teléfono</mat-label>
+      <input matInput formControlName="telefono" placeholder="987654321">
+      <mat-icon matPrefix>phone</mat-icon>
+      <mat-error *ngIf="telefono?.hasError('required')">
+        El teléfono es requerido
+      </mat-error>
+      <mat-error *ngIf="telefono?.hasError('pattern')">
+        Ingrese un teléfono válido (8-15 dígitos)
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Email -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Correo Electrónico</mat-label>
+      <input matInput formControlName="email" placeholder="ejemplo@correo.com" type="email">
+      <mat-icon matPrefix>email</mat-icon>
+      <mat-error *ngIf="email?.hasError('required')">
+        El correo es requerido
+      </mat-error>
+      <mat-error *ngIf="email?.hasError('email')">
+        Ingrese un correo válido
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Estado -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Estado</mat-label>
+      <mat-select formControlName="estado">
+        <mat-option *ngFor="let est of estados" [value]="est">
+          {{ est }}
+        </mat-option>
+      </mat-select>
+      <mat-icon matPrefix>toggle_on</mat-icon>
+      <mat-error *ngIf="estado?.hasError('required')">
+        El estado es requerido
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="dialog-actions">
+  <button mat-button (click)="cancelar()">
+    Cancelar
+  </button>
+  <button mat-raised-button color="primary" [disabled]="!formulario.valid" (click)="enviar()">
+    <mat-icon>{{ editando ? 'update' : 'add' }}</mat-icon>
+    {{ editando ? 'Actualizar' : 'Crear' }}
+  </button>
+</mat-dialog-actions>
