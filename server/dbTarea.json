@@ -1,0 +1,143 @@
+{
+  "doctores": [
+    {
+      "id": 1,
+      "nombre": "Dr. Juan Pérez",
+      "especialidad": "Cardiología",
+      "telefono": "987654321",
+      "email": "juan.perez@hospital.com",
+      "estado": "Activo"
+    },
+    {
+      "id": 2,
+      "nombre": "Dra. María López",
+      "especialidad": "Pediatría",
+      "telefono": "945321678",
+      "email": "maria.lopez@clinica.com",
+      "estado": "Activo"
+    },
+    {
+      "id": 3,
+      "nombre": "Dr. Pedro Castillo",
+      "especialidad": "Traumatología",
+      "telefono": "924567890",
+      "email": "pedro.castillo@salud.com",
+      "estado": "Inactivo"
+    },
+    {
+      "id": 4,
+      "nombre": "Dra. Ana Torres",
+      "especialidad": "Dermatología",
+      "telefono": "987120345",
+      "email": "ana.torres@clinica.com",
+      "estado": "Activo"
+    },
+    {
+      "id": 5,
+      "nombre": "Dr. Luis García",
+      "especialidad": "Oftalmología",
+      "telefono": "956478120",
+      "email": "luis.garcia@hospital.com",
+      "estado": "Inactivo"
+    },
+    {
+      "nombre": "Dr. Lizardo Montero",
+      "especialidad": "Cardiología",
+      "telefono": "920834923",
+      "email": "lizardoOP@gmail.com",
+      "id": 6
+    }
+  ],
+  "afiliados": [
+    {
+      "id": 1,
+      "nombre": "Carlos Ramos",
+      "dni": "74589632",
+      "edad": 32,
+      "telefono": "987456321",
+      "email": "carlos.ramos@example.com",
+      "direccion": "Av. Los Olivos 345",
+      "codigoAfiliado": "AFI-001",
+      "tipoSangre": "O+",
+      "enfermedad": "Hipertensión",
+      "donador": true,
+      "fecVenci": "2026-03-15"
+    },
+    {
+      "id": 2,
+      "nombre": "María Torres",
+      "dni": "70895412",
+      "edad": 28,
+      "telefono": "956123478",
+      "email": "maria.torres@example.com",
+      "direccion": "Jr. San Martín 120",
+      "codigoAfiliado": "AFI-002",
+      "tipoSangre": "A-",
+      "enfermedad": "Asma",
+      "donador": false,
+      "fecVenci": "2025-12-31"
+    },
+    {
+      "id": 3,
+      "nombre": "Eugenio Manzilla",
+      "dni": "78392018",
+      "edad": 22,
+      "telefono": "983017384",
+      "email": "eugenio.manzilla@example.com",
+      "direccion": "Jr Caraveli 912",
+      "codigoAfiliado": "AFI-003",
+      "tipoSangre": "A+",
+      "enfermedad": "Diabetes",
+      "donador": true,
+      "fecVenci": "2026-12-31"
+    },
+    {
+      "id": 4,
+      "nombre": "Jesus Adrianzen",
+      "dni": "73821930",
+      "edad": 30,
+      "telefono": "903728192",
+      "email": "jesus.adrianzen@example.com",
+      "direccion": "Jr. Ortega Areas",
+      "codigoAfiliado": "AFI-004",
+      "tipoSangre": "RH-",
+      "enfermedad": "Sida",
+      "donador": true,
+      "fecVenci": "2026-10-31"
+    },
+    {
+      "id": 5,
+      "codigoAfiliado": "AF-07",
+      "nombre": "CRISTINA AMELIA PANDURO ESPINO",
+      "dni": "78392018",
+      "edad": "24",
+      "telefono": "903857218",
+      "email": "cristinaPanduro@gmail.com",
+      "direccion": "Av. Los Jazmines",
+      "tipoSangre": "A+",
+      "enfermedad": "VIH",
+      "donador": true,
+      "fecVenci": "2026-03-15"
+    }
+  ],
+  "citasMedicas": [
+    {
+      "id": 1,
+      "fecha": "2025-01-15",
+      "hora": "10:30",
+      "motivo": "Control general",
+      "doctorId": 1,
+      "pacienteId": 1,
+      "estado": "Programada"
+    },
+    {
+      "id": 2,
+      "fecha": "2025-02-05",
+      "hora": "08:00",
+      "motivo": "Dolor de cabeza persistente",
+      "doctorId": 2,
+      "pacienteId": 2,
+      "estado": "Programada"
+    }
+  ]
+}
